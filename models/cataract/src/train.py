@@ -114,7 +114,7 @@ if os.path.exists(config.WEIGHT):
 else:
     train(model, EPOCHS, optimizer, train_loader, crit,val_loader)
 
-
+print("evaluation !! \n")
 
 model.eval()
 test_loss = 0
