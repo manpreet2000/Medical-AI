@@ -39,8 +39,18 @@ train_set=dataset_class.cat_dataset(train_df,transforms=transform)
 test_set=dataset_class.cat_dataset(test_df,transforms=transform)
 
 
-train_loader = torch.utils.data.DataLoader(train_set, batch_size=config.BATCH,shuffle=True)
-val_loader = torch.utils.data.DataLoader(test_set, batch_size=config.BATCH,shuffle=True)
+class_weights = 1./torch.Tensor(class_count_samples)
+train_target=list(train_df.cataract)
+train_samples_weight = [class_weights[class_id] for class_id in train_target]
+test_target=list(test_df.cataract)
+test_samples_weight = [class_weights[class_id] for class_id in test_target]
+
+
+train_sampler = torch.utils.data.sampler.WeightedRandomSampler(train_samples_weight, len(train_df))
+test_sampler = torch.utils.data.sampler.WeightedRandomSampler(test_samples_weight, len(test_df))
+
+train_loader = torch.utils.data.DataLoader(train_set, batch_size=BATCH,sampler=train_sampler)
+val_loader = torch.utils.data.DataLoader(test_set, batch_size=BATCH, sampler=test_sampler)
 
 
 model=models.densenet121(pretrained=True)
