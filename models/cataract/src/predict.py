@@ -16,7 +16,7 @@ model=model.to(device)
 
 
 if torch.cuda.is_available()==False:
-    model.load_state_dict(torch.load("models/cataract/weight/cat.h5", map_location=lambda storage, loc: storage))
+    model.load_state_dict(torch.load("models/cataract/weight/cat1.h5", map_location=lambda storage, loc: storage))
 else:
     model.load_state_dict(torch.load("models/cataract/weight/cat.h5"))
 
@@ -50,7 +50,7 @@ class predict_img(object):
 
 if __name__=="__main__":
     
-    m=predict_img("./models/cataract/data/ODIR-5K/ODIR-5K/Training Images/252_left.jpg")
+    m=predict_img("./models/cataract/data/ODIR-5K/ODIR-5K/Training Images/2111_left.jpg")
     print(m.predict_cataract())
 
 
