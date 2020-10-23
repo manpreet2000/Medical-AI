@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cataract</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//cdn.staticfile.org/codemirror/5.40.2/codemirror.min.js"></script>
+    <link rel="shortcut icon" href="//static.runoob.com/images/favicon.ico" mce_href="//static.runoob.com/images/favicon.ico" type="image/x-icon" >
+	<link rel="stylesheet" href="//cdn.staticfile.org/codemirror/5.40.2/codemirror.min.css">
+	<script src="//cdn.staticfile.org/codemirror/5.40.2/mode/htmlmixed/htmlmixed.min.js"></script>
+	<script src="//cdn.staticfile.org/codemirror/5.40.2/mode/css/css.min.js"></script>
+	<script src="//cdn.staticfile.org/codemirror/5.40.2/mode/javascript/javascript.min.js"></script>
+	<script src="//cdn.staticfile.org/codemirror/5.40.2/mode/xml/xml.min.js"></script>
+	<script src="//cdn.staticfile.org/codemirror/5.40.2/addon/edit/closetag.min.js"></script>
+	<script src="//cdn.staticfile.org/codemirror/5.40.2/addon/edit/closebrackets.min.js"></script>
+
+    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+
+</head>
+
+
+<body>
+<style>
+body{min-height:300px;padding-top:90px;background: #0e9ed6d8;}
+p{ line-height:30px}
+</style>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background: #b27db9;">
+  <div class="container">
+    <div class="navbar-header logo"><h1 style="color: white">Cataract Prediction using Eye Fundus</h1>
+    </div>
+  </div>
+</nav>
+
+<br>
+<div class="container" >
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 style="color:rgb(128, 128, 128)">Upload</h4><br/>
+                        <form id="uploadform" method="post" enctype="multipart/form-data">
+                            <input name="file" type="file" id="image"> <br/>
+
+                            <button id="load" type="submit" class="btn" >Upload</button>
+
+                            <br>
+                            <!-- <img class="mb-4" src="./static/975_right.jpg" alt="" height="256"> -->
+                            {% if resultt %}
+                            <img class="mb-4" src="./static/{{image_loc}}" alt="" height="256">
+                            <h1>{{resultt}}</h1>
+                            <br>
+            
+                            {% endif %}
+                        </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+	
+</body>
+</html>

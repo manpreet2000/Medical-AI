@@ -5,13 +5,13 @@ import shutil
 import src.predict as predict 
 import cv2
 import matplotlib.pyplot as plt
-app = Flask(__name__)
-CORS(app)
+brainapp = Flask(__name__)
+CORS(brainapp)
 
 upload_folder="./models/brain tumor/static"
 
 
-@app.route("/", methods=["GET","POST"])
+@brainapp.route("/", methods=["GET","POST"])
 def index():
     if request.method=="POST":
         image_file=request.files["file"]
@@ -41,4 +41,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    brainapp.run(debug=True,port=8000)

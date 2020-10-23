@@ -41,17 +41,19 @@ class predict_img(object):
             img=img.reshape((1,img.shape[0],img.shape[1],img.shape[2]))
         except:
             img=img.reshape((1,img.shape[0],img.shape[1]))
-        pred=model(img.to(device))
+        model.eval()
+        with torch.no_grad():
+            pred=model(img.to(device))
         _,predicted = torch.max(pred.data, 1)
 
         predicted="Cataract" if predicted==1 else "Normal"
         return predicted
 
 
-if __name__=="__main__":
+# if __name__=="__main__":
     
-    m=predict_img("./models/cataract/data/ODIR-5K/ODIR-5K/Training Images/2111_left.jpg")
-    print(m.predict_cataract())
+#     m=predict_img("./models/cataract/data/ODIR-5K/ODIR-5K/Training Images/2111_left.jpg")
+#     print(m.predict_cataract())
 
 
 
