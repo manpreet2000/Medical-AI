@@ -2,7 +2,6 @@
 import numpy as np
 import pandas as pd 
 import os
-import seaborn as sns
 import skimage
 from skimage import io, transform
 from sklearn.metrics import confusion_matrix
@@ -11,6 +10,9 @@ import torch.nn as nn
 import torch.optim as optim
 import torchvision
 from torchvision import datasets, models, transforms
+# custom packages
+import config
+import plot_me
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -24,16 +26,20 @@ def data_transforms():
             
     return transform
 
-image_datasets = {x: datasets.ImageFolder(os.path.join(data_dir, x), data_transforms()) 
-                  for x in [TRAIN, VAL, TEST]}
+image_datasets = {x: datasets.ImageFolder(os.path.join(config.data_dir, x), data_transforms()) 
+                  for x in [config.TRAIN, config.VAL, config.TEST]}
 
-dataloaders = {TRAIN: torch.utils.data.DataLoader(image_datasets[TRAIN], batch_size = 4, shuffle=True), 
-               VAL: torch.utils.data.DataLoader(image_datasets[VAL], batch_size = 1, shuffle=True), 
-               TEST: torch.utils.data.DataLoader(image_datasets[TEST], batch_size = 1, shuffle=True)}
+dataloaders = {config.TRAIN: torch.utils.data.DataLoader(image_datasets[config.TRAIN], batch_size = 4, shuffle=True), 
+               config.VAL: torch.utils.data.DataLoader(image_datasets[config.VAL], batch_size = 1, shuffle=True), 
+               config.TEST: torch.utils.data.DataLoader(image_datasets[config.TEST], batch_size = 1, shuffle=True)}
 
-dataset_sizes = {x: len(image_datasets[x]) for x in [TRAIN, VAL]}
-classes = image_datasets[TRAIN].classes
-class_names = image_datasets[TRAIN].classes
+dataset_sizes = {x: len(image_datasets[x]) for x in [config.TRAIN, config.VAL]}
+classes = image_datasets[config.TRAIN].classes
+class_names = image_datasets[config.TRAIN].classes
+
+inputs, classes = next(iter(dataloaders[config.TRAIN]))
+out = torchvision.utils.make_grid(inputs)
+plot_me.imshow(out, title=[class_names[x] for x in classes])
 
 model_pre = models.densenet121()
 for param in model_pre.features.parameters():
@@ -57,8 +63,8 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs):
         print("Epoch: {}/{}".format(epoch+1, num_epochs))
         print("="*10)
         
-        for phase in [TRAIN, VAL]:
-            if phase == TRAIN:
+        for phase in [config.TRAIN, config.VAL]:
+            if phase == config.TRAIN:
                 scheduler.step()
                 model.train()
             else:
@@ -70,7 +76,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs):
                 inputs = inputs.to(device)
                 labels = labels.to(device)
                 optimizer.zero_grad()
-                with torch.set_grad_enabled(phase==TRAIN):
+                with torch.set_grad_enabled(phase==config.TRAIN):
                     outputs = model(inputs)
                     _, preds = torch.max(outputs, 1)
                     loss = criterion(outputs, labels)
@@ -100,7 +106,7 @@ def test_model():
     true_labels = []
     pred_labels = []
     with torch.no_grad():
-        for data in dataloaders[TEST]:
+        for data in dataloaders[config.TEST]:
             inputs, labels = data
             inputs = inputs.to(device)
             labels = labels.to(device)
@@ -117,11 +123,11 @@ if os.path.exists(config.WEIGHT):
     print("\n Model found! Loading \n")
     
     if torch.cuda.is_available()==False:
-        model.load_state_dict(torch.load(config.WEIGHT, map_location=lambda storage, loc: storage))
+        model_pre.load_state_dict(torch.load(config.WEIGHT, map_location=lambda storage, loc: storage))
     else:
-        model.load_state_dict(torch.load(config.WEIGHT))
+        model_pre.load_state_dict(torch.load(config.WEIGHT))
 else:
-    train_model(model_pre, criterion, optimizer, exp_lr_scheduler, num_epochs=EPOCHS)
+    train_model(model_pre, criterion, optimizer, exp_lr_scheduler, num_epochs=config.EPOCHS)
 
 print("Evaluation !! \n")
 true_labels, pred_labels, running_correct, running_total, acc = test_model()
@@ -130,4 +136,4 @@ print("Test Accuracy: ", acc)
 
 cm = confusion_matrix(true_labels, pred_labels)
 tn, fp, fn, tp = cm.ravel()
-ax = sns.heatmap(cm, annot=True, fmt="d")
+plot_me.matrix(cm)

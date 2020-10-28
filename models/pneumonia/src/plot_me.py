@@ -1,9 +1,8 @@
 # import packages
-%matplotlib inline
 import matplotlib.pyplot as plt
 import torchvision
 import numpy as np
-
+import seaborn as sns
 
 def imshow(inp, title=None):
     inp = inp.numpy().transpose((1, 2, 0))
@@ -16,7 +15,5 @@ def imshow(inp, title=None):
         plt.title(title)
     plt.pause(0.001)  
 
-
-inputs, classes = next(iter(dataloaders[TRAIN]))
-out = torchvision.utils.make_grid(inputs)
-imshow(out, title=[class_names[x] for x in classes])
+def matrix(cm):
+    ax = sns.heatmap(cm, annot=True, fmt="d")

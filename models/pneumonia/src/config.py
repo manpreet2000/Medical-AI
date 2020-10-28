@@ -1,5 +1,5 @@
 EPOCHS = 30
-data_dir = "../input/chest-xray-pneumonia/chest_xray/chest_xray"
+data_dir = "./models/pneumonia/data/"
 TEST = 'test'
 TRAIN = 'train'
 VAL ='val'
