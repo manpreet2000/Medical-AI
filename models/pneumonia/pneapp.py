@@ -1,14 +1,15 @@
 import os
 import shutil
-from flask import Flask,request,render_template
+from flask import Flask,request,render_template,Blueprint
 import torch
 import torch.nn as nn
 from flask_cors import CORS
 
 # custom package
-import src.predict as predict 
-
-pneapp = Flask(__name__)
+#import src.predict as predict 
+import models.pneumonia.src.predict as predict
+#pneapp = Flask(__name__)
+pneapp=Blueprint("pneapp",__name__,template_folder="templates",static_folder="static")
 CORS(pneapp)
 
 upload_folder="./models/pneumonia/static"
@@ -26,8 +27,8 @@ def index():
             result=classifier.predict_pneumonia()
             print(result)
             #print(image_loc)
-            return render_template('index.html',resultt=result,image_loc=image_file.filename)
-    return render_template('index.html',resultt=None,image_loc=None)
+            return render_template('/pneindex.html',resultt=result,image_loc=image_file.filename)
+    return render_template('/pneindex.html',resultt=None,image_loc=None)
 
-if __name__ == '__main__':
-    pneapp.run(debug=True,port=3000)
+# if __name__ == '__main__':
+#     pneapp.run(debug=True,port=3000)
