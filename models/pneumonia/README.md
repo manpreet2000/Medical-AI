@@ -74,7 +74,7 @@ python pneapp.py
 * Update `X-Ray` image and predict if user has `pnemonia` or not
 <img src="image.png" alt="Figure 3. Prediction Pneumonia/Normal " width="" height="">
 
-## Training your own model****
+## Training your own model*
 * you can change configuration from config.py
 
 
