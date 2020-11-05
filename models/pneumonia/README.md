@@ -8,13 +8,13 @@
 [![Issues][https://img.shields.io/github/issues/manpreet2000/Medical-AI.svg?style=flat-square]](https://github.com/manpreet2000/Medical-AI/issues)
  -->
 Pneumonia is the leading cause of death among young children and one of the top mortality causes worldwide. The pneumonia detection is usually performed through examine of chest X-Ray radiograph by highly trained specialists. This process is tedious and often leads to a disagreement between radiologists. Computer-aided diagnosis systems showed potential for improving the diagnostic accuracy. In this work, we develop the computational approach for pneumonia regions detection based on single-shot detectors, squeeze-and-extinction deep convolution neural networks and augmentations. 
-<img src="fig1.jpg" alt="Figure 1. Prediction Pneumonia/Normal " width="" height="">
+<img src="https://github.com/manpreet2000/Medical-AI/tree/dev/models/pneumonia/readme_images/fig1.jpeg" alt="Figure 1. Prediction Pneumonia/Normal " width="" height="">
 
 ## Dataset 
 The dataset is organized into 3 folders (train, test, val) and contains subfolders for each image category (Pneumonia/Normal). There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal).
 
 The normal chest X-ray (left panel) depicts clear lungs without any areas of abnormal opacification in the image. Bacterial pneumonia (middle) typically exhibits a focal lobar consolidation, in this case in the right upper lobe (white arrows), whereas viral pneumonia (right) manifests with a more diffuse ‘‘interstitial’’ pattern in both lungs.
-<img src="fig2.jpg" alt="Figure 2. Illustrative Examples of Chest X-Rays in Patients with Pneumonia" width="" height="">
+<img src="https://github.com/manpreet2000/Medical-AI/tree/dev/models/pneumonia/readme_images/fig2.jpg" alt="Figure 2. Illustrative Examples of Chest X-Rays in Patients with Pneumonia" width="" height="">
 
 ## Introduction
 
