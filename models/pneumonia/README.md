@@ -18,20 +18,28 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
 
 ## Introduction
 #### Directory Layout 4
-├── notebook
-|   ├── x-ray-image-classification-using-pytorch.ipynb
-├── src
-|   ├── config.py
-|   ├── plot_me.py
-|   ├── predict.py
-|   ├── train.py
-├── static
-|   ├── inputImage.jpg
-├── templates
-|   ├── pneindex.html
-├── weights
-|   ├── pne.pt
-├── pneapp.py
+    .
+    ├── notebook
+    │   ├── x-ray-image-classification-using-pytorch.ipynb
+    ├── src
+    │   ├── config.py
+    |   ├── plot_me.py
+    |   ├── predict.py
+    |   ├── train.py
+    ├── static
+    |   ├── inputImage.jpg
+    ├── templates
+    |   ├── pneindex.html
+    ├── weights
+    |   ├── pne.pt
+    ├── pneapp.py
+
+    .
+    ├── docs                    # Documentation files (alternatively `doc`)
+        │   ├── TOC.md              # Table of contents
+        │   ├── faq.md              # Frequently asked questions
+        │   ├── misc.md             # Miscellaneous information
+        │   ├── usage.md  
 
 #### Content
 | Directory | Info |
