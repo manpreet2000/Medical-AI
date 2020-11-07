@@ -76,7 +76,7 @@ pip install -r requirement.txt
 python pneapp.py
 ``` 
 * Update `X-Ray` image and predict if user has `pnemonia` or not
-<img src="fig4.jpg" alt=" Prediction of Model " width="" height="">
+<img src="readme_images/fig4.jpg" alt=" Prediction of Model " width="" height="">
 
 ## Train your own model*
 * you can change configuration from config.py
