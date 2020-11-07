@@ -3,13 +3,9 @@ import numpy as np
 from torchvision import models,transforms
 import torch.nn as nn
 import cv2
-<<<<<<< HEAD
 import base64
 from PIL import Image
 from io import BytesIO
-=======
-
->>>>>>> baa7f281db791260b5815b6c8781a5749ce3543d
 
 device='cuda:0' if torch.cuda.is_available() else 'cpu'
 
@@ -60,11 +56,7 @@ class predict_img(object):
         _,predicted = torch.max(pred.data, 1)
 
         predicted="Pneumonia" if predicted==1 else "Normal"
-<<<<<<< HEAD
         return predicted,imgo
-=======
-        return predicted
->>>>>>> baa7f281db791260b5815b6c8781a5749ce3543d
 
 # if __name__=="__main__":
     

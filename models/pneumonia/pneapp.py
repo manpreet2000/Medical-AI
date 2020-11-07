@@ -4,13 +4,9 @@ from flask import Flask,request,render_template,Blueprint
 import torch
 import torch.nn as nn
 from flask_cors import CORS
-<<<<<<< HEAD
 import base64
 import numpy as np
 from io import BytesIO
-=======
-
->>>>>>> baa7f281db791260b5815b6c8781a5749ce3543d
 # custom package
 #import src.predict as predict 
 import models.pneumonia.src.predict as predict
