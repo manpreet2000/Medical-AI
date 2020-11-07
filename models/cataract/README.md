@@ -42,7 +42,7 @@ This dataset is meant to represent ‘‘real-life’’ set of patient informat
     |   ├── cat1.h5                                                     # trained weights
     ├── catapp.py                                                       # web app file
     
-    #### Content
+#### Content
 | Directory | Info |
 |-----------|--------------|
 | `src` | Contains all Python files |
