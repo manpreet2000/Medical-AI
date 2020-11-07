@@ -149,8 +149,7 @@ class predict_img:
         mime = "image/jpeg"
         uri = "data:%s;base64,%s"%(mime, img_base64)
         return uri
-        #plt.savefig(self.upload_folder+"/"+self.image_name+"NEW.jpg" ,bbox_inches = "tight")
-        
+       
 
 
 # if __name__=="__main__":
