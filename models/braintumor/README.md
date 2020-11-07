@@ -41,7 +41,7 @@ to 110 patients included in The Cancer Genome Atlas (TCGA) lower-grade glioma co
     |   ├── model.h5                                                    # trained weights
     ├── brainapp.py                                                     # web app file
     
-    #### Content
+#### Content
 | Directory | Info |
 |-----------|--------------|
 | `notesbook` | contains jupyter notebook related to `EDA` and `experiment` | 
