@@ -56,6 +56,7 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
 | `templates` | Contains HTML file |
 | `static` | Contains css, js files and images  |
 | `data` | Contains [data](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) which is hidden  |
+| `weights` | contains trained weights |
 
 ## Evaluation 
 The proposed approach was evaluated using Precision , Recall , Accuracy and F1 Score. Our source code is freely available here.
