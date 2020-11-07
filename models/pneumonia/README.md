@@ -60,7 +60,7 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
 
 ## Evaluation 
 The proposed approach was evaluated using Precision , Recall , Accuracy and F1 Score. Our source code is freely available here.
-<img src="readme_images/fig3.jpg" alt="Figure 3. Evaluation of Model " width="" height="">
+<img src="readme_images/fig3.jpeg" alt="Figure 3. Evaluation of Model " width="" height="">
 
 ## Prerequisites
 * Python 3.4+
