@@ -20,7 +20,7 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
 
 ## Introduction
 
-#### Directory Layout 4
+#### Directory Layout 
     .
     ├── data                                                            # data folder is hidden , path is provided in .gitnore file
     │   ├── test
