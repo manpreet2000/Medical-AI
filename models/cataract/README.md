@@ -49,6 +49,7 @@ This dataset is meant to represent ‘‘real-life’’ set of patient informat
 | `templates` | Contains HTML file |
 | `static` | Contains css, js files and images  |
 | `data` | Contains [data](https://www.kaggle.com/andrewmvd/ocular-disease-recognition-odir5k) which is hidden  |
+| `weights` | contains trained weights |
 
 ## Evaluation 
 The proposed approach was evaluated using Precision , Recall , Accuracy and F1 Score. Our source code is freely available here.
