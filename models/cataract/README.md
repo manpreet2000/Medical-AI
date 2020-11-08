@@ -11,14 +11,15 @@ Ocular Disease Intelligent Recognition (ODIR) is a structured ophthalmic databas
 
 This dataset is meant to represent ‘‘real-life’’ set of patient information collected by Shanggong Medical Technology Co., Ltd. from different hospitals/medical centers in China.
 
-<img src="readme_images/fig2.jpg" alt="Figure 2. Illustrative Examples of Retina Image in Patients with Cataract" width="" height="">
+<img src="readme_images/fig2.png" alt="Figure 2. Illustrative Examples of Retina Image in Patients with Cataract" width="" height="">
 
 ## Introduction
 
 #### Directory Layout 
     .
     ├── data                                                            # data folder is hidden , path is provided in .gitnore file
-    │   ├── 
+    │   ├── Images_folder
+    |   |── data.csv
     ├── src
     │   ├── config.py                                                   # contains all the configuration
     |   ├── dataset_class.py                                            # create dataset
@@ -46,7 +47,7 @@ This dataset is meant to represent ‘‘real-life’’ set of patient informat
 ## Evaluation 
 The proposed approach was evaluated using Precision , Recall , Accuracy and F1 Score. Our source code is freely available here.
 
-<img src="readme_images/fig3.jpg" alt="Figure 3. Evaluation of Model " width="" height="">
+<img src="readme_images/res.png" alt="Figure 3. Evaluation of Model " width="" height="">
 
 ## Prerequisites
 * Python 3.4+
@@ -63,10 +64,11 @@ python catapp.py
 ``` 
 * Update `Retina` image and predict if user has `cataract` or not
 
-<img src="out.gif" alt=" Output GIF " width="" height="">
 
 ## Train your own model*
-* you can change configuration from config.py
+* For traning you need to run `train.py` in src directory.
+* if want to change epochs, data directory, random seed, learning rate, etc change it from `config.py`.
 
 > Note :
-> * :-  
+> * :- This project purely utilize pytorch, it would be appriciated to use pytorch only.
+
