@@ -4,7 +4,9 @@ import numpy as np
 from torchvision import models,transforms
 import torch.nn as nn
 import cv2
-
+import base64
+from PIL import Image
+from io import BytesIO
 
 device='cuda:0' if torch.cuda.is_available() else 'cpu'
 IMG_SIZE=256
@@ -30,12 +32,13 @@ transform=transforms.Compose([
 
 
 class predict_img(object):
-    def __init__(self,image_path):
-        self.image_path=image_path
+    def __init__(self,image_code):
+        self.image_code=image_code
 
     def predict_cataract(self):
-        img=cv2.imread(self.image_path)
-        img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+        img=cv2.imdecode(self.image_code,cv2.IMREAD_COLOR)
+        imgo = Image.fromarray(img.astype("uint8"))
+        img=np.array(imgo)
         img=transform(img)
         try:
             img=img.reshape((1,img.shape[0],img.shape[1],img.shape[2]))
@@ -47,7 +50,7 @@ class predict_img(object):
         _,predicted = torch.max(pred.data, 1)
 
         predicted="Cataract" if predicted==1 else "Normal"
-        return predicted
+        return predicted,imgo
 
 
 # if __name__=="__main__":

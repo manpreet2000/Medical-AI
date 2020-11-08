@@ -7,6 +7,7 @@
 [![Stargazers][https://img.shields.io/github/stars/manpreet2000/Medical-AI.svg?style=flat-square]][https://github.com/manpreet2000/Medical-AI/stargazers]
 [![Issues][https://img.shields.io/github/issues/manpreet2000/Medical-AI.svg?style=flat-square]](https://github.com/manpreet2000/Medical-AI/issues)
  -->
+<<<<<<< HEAD
 Pneumonia is the leading cause of death among young children and one of the top mortality causes worldwide. The pneumonia detection is usually performed through examine of chest X-Ray radiograph by highly trained specialists. This process is tedious and often leads to a disagreement between radiologists. Computer-aided diagnosis systems showed potential for improving the diagnostic accuracy. In this work, we develop the computational approach for pneumonia regions detection based on single-shot detectors, squeeze-and-extinction deep convolution neural networks and augmentations. The proposed approach was evaluated using Precision , Recall , Accuracy and F1 Score. Our source code is freely available here.
 
 ## Dataset 
@@ -19,6 +20,33 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
 ## Introduction
 #### Directory Layout 4
     .
+=======
+Pneumonia is the leading cause of death among young children and one of the top mortality causes worldwide. The pneumonia detection is usually performed through examine of chest X-Ray radiograph by highly trained specialists. This process is tedious and often leads to a disagreement between radiologists. Computer-aided diagnosis systems showed potential for improving the diagnostic accuracy. In this work, we develop the computational approach for pneumonia regions detection based on single-shot detectors, squeeze-and-extinction deep convolution neural networks and augmentations. 
+
+<img src="readme_images/fig1.jpg" alt="Figure 1.  Pneumonia/Normal " width="" height="">
+
+## Dataset 
+The dataset is organized into 3 folders (train, test, val) and contains subfolders for each image category (Pneumonia/Normal). There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal).
+
+The normal chest X-ray (left panel) depicts clear lungs without any areas of abnormal opacification in the image. Bacterial pneumonia (middle) typically exhibits a focal lobar consolidation, in this case in the right upper lobe (white arrows), whereas viral pneumonia (right) manifests with a more diffuse ‘‘interstitial’’ pattern in both lungs.
+
+<img src="readme_images/fig2.jpg" alt="Figure 2. Illustrative Examples of Chest X-Rays in Patients with Pneumonia" width="" height="">
+
+## Introduction
+
+#### Directory Layout 
+    .
+    ├── data                                                            # data folder is hidden , path is provided in .gitnore file
+    │   ├── test
+    │   │   ├── NORMAL
+    │   │   ├── PNEUMONIA
+    │   ├── train
+    │   │   ├── NORMAL
+    │   │   ├── PNEUMONIA
+    │   ├── val
+    │   │   ├── NORMAL
+    │   │   ├── PNEUMONIA
+>>>>>>> 8bfc31261828cee402a0afb1e0a4b720c39786f5
     ├── notebook
     │   ├── x-ray-image-classification-using-pytorch.ipynb              # notebooks related to `EDA` and `experiment`
     ├── src
@@ -34,7 +62,10 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
     |   ├── pne.pt                                                      # trained weights
     ├── pneapp.py                                                       # web app file
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> 8bfc31261828cee402a0afb1e0a4b720c39786f5
 
 #### Content
 | Directory | Info |
@@ -44,6 +75,18 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
 | `templates` | Contains HTML file |
 | `static` | Contains css, js files and images  |
 | `data` | Contains [data](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) which is hidden  |
+<<<<<<< HEAD
+=======
+| `weights` | contains trained weights |
+
+## Evaluation 
+The proposed approach was evaluated using Precision , Recall , Accuracy and F1 Score. Our source code is freely available here.
+<img src="readme_images/fig3.jpeg" alt="Figure 3. Evaluation of Model " width="" height="">
+
+## Prerequisites
+* Python 3.4+
+* PyTorch and its dependencies
+>>>>>>> 8bfc31261828cee402a0afb1e0a4b720c39786f5
 
 ## How to Install and Run
 * Clone this repository and run in command prompt
@@ -55,6 +98,16 @@ pip install -r requirement.txt
 python pneapp.py
 ``` 
 * Update `X-Ray` image and predict if user has `pnemonia` or not
+<<<<<<< HEAD
 <img src="image.png" alt="Figure 2. Prediction Pneumonia/Normal " width="" height="">
+=======
+<img src="readme_images/fig4.jpg" alt=" Prediction of Model " width="" height="">
+
+## Train your own model*
+* you can change configuration from config.py
+
+> Note :
+> * :- 
+>>>>>>> 8bfc31261828cee402a0afb1e0a4b720c39786f5
 
 
