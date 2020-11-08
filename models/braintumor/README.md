@@ -72,7 +72,6 @@ python brainapp.py
 ``` 
 * Update `MR` Image and predict if user has `brain tumor` or not and if yes then `where` 
 
-<img src="out.gif" alt=" Output GIF " width="" height="">
 
 ## Train your own model*
 * For traning you need to run `train.py` in src directory.
