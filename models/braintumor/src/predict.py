@@ -7,8 +7,9 @@ from collections import OrderedDict
 import cv2
 import matplotlib.pyplot as plt
 from albumentations.pytorch import ToTensor
-
-
+import io
+import base64
+from PIL import Image
 
 class UNet(nn.Module):
 
@@ -108,10 +109,8 @@ class UNet(nn.Module):
 
 
 class predict_img:
-    def __init__(self,filename,image_name,upload_folder):
-        self.filename=filename
-        self.image_name=image_name
-        self.upload_folder=upload_folder
+    def __init__(self,image_code):
+        self.image_code=image_code
         self.test_transforms = A.Compose([
                 A.Resize(width = 256, height = 256, p=1.0),
                 A.Normalize(p=1.0),
@@ -124,7 +123,9 @@ class predict_img:
         print("\n Model found! Loading \n")
         model.load_state_dict(torch.load("./models/braintumor/weights/model.h5", map_location=lambda storage, loc: storage))
         model=model.to(device)
-        img=cv2.imread(self.filename)
+        img=cv2.imdecode(self.image_code,cv2.IMREAD_COLOR)
+        imgo = Image.fromarray(img.astype("uint8"))
+        img=np.array(imgo)
         img_p=self.test_transforms(image=img)['image']
         img_p=img_p.reshape((1,3,256,256))
         pred_o=model(img_p.to(device).float())
@@ -133,13 +134,22 @@ class predict_img:
 
 
         plt.subplot(1,2,1)
+        
         plt.imshow(img)
         plt.title('Original Image')
         plt.subplot(1,2,2)
         plt.imshow(pred_o.numpy(),cmap='gray')
         plt.title('Tumor Segmentation')
-        plt.savefig(self.upload_folder+"/"+self.image_name+"NEW.jpg" ,bbox_inches = "tight")
+        buf = io.BytesIO()
+        plt.savefig(buf, format="jpg", dpi=180)
+        buf.seek(0)
+        img_arr = np.frombuffer(buf.getvalue(), dtype=np.uint8)
         
+        img_base64 = base64.b64encode(buf.getvalue()).decode('ascii')
+        mime = "image/jpeg"
+        uri = "data:%s;base64,%s"%(mime, img_base64)
+        return uri
+       
 
 
 # if __name__=="__main__":
