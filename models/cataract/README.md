@@ -18,15 +18,7 @@ This dataset is meant to represent ‘‘real-life’’ set of patient informat
 #### Directory Layout 
     .
     ├── data                                                            # data folder is hidden , path is provided in .gitnore file
-    │   ├── test
-    │   │   ├── NORMAL
-    │   │   ├── PNEUMONIA
-    │   ├── train
-    │   │   ├── NORMAL
-    │   │   ├── PNEUMONIA
-    │   ├── val
-    │   │   ├── NORMAL
-    │   │   ├── PNEUMONIA
+    │   ├── 
     ├── src
     │   ├── config.py                                                   # contains all the configuration
     |   ├── dataset_class.py                                            # create dataset
@@ -42,7 +34,7 @@ This dataset is meant to represent ‘‘real-life’’ set of patient informat
     |   ├── cat1.h5                                                     # trained weights
     ├── catapp.py                                                       # web app file
     
-    #### Content
+#### Content
 | Directory | Info |
 |-----------|--------------|
 | `src` | Contains all Python files |
@@ -77,4 +69,4 @@ python catapp.py
 * you can change configuration from config.py
 
 > Note :
-> * :- 
+> * :-  

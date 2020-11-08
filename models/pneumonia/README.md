@@ -60,11 +60,12 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
 | `templates` | Contains HTML file |
 | `static` | Contains css, js files and images  |
 | `data` | Contains [data](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) which is hidden  |
+| `weights` | contains trained weights |
 
 <<<<<<< HEAD
 ## Evaluation 
 The proposed approach was evaluated using Precision , Recall , Accuracy and F1 Score. Our source code is freely available here.
-<img src="readme_images/fig3.jpg" alt="Figure 3. Evaluation of Model " width="" height="">
+<img src="readme_images/fig3.jpeg" alt="Figure 3. Evaluation of Model " width="" height="">
 
 ## Prerequisites
 * Python 3.4+
@@ -83,7 +84,11 @@ python pneapp.py
 ``` 
 * Update `X-Ray` image and predict if user has `pnemonia` or not
 <<<<<<< HEAD
+<<<<<<< HEAD
 <img src="out.gif" alt=" Output GIF " width="" height="">
+=======
+<img src="readme_images/fig4.jpg" alt=" Prediction of Model " width="" height="">
+>>>>>>> dev
 
 ## Train your own model*
 * you can change configuration from config.py

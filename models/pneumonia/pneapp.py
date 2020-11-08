@@ -14,8 +14,6 @@ import models.pneumonia.src.predict as predict
 pneapp=Blueprint("pneapp",__name__,template_folder="templates",static_folder="static")
 CORS(pneapp)
 
-upload_folder="./models/pneumonia/static"
-
 @pneapp.route("/", methods=["GET","POST"])
 def index():
     if request.method=="POST":

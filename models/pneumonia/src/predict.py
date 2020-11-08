@@ -48,11 +48,7 @@ class predict_img(object):
         model_pre.eval()
         with torch.no_grad():
             pred=model_pre(img.to(device))
-        # predicted = torch.max(pred.data)
-
-        # # predict="Pneumonia" if predicted==pred.data[1] else "Normal"
-        # return predicted , type(predicted)
-
+        
         _,predicted = torch.max(pred.data, 1)
 
         predicted="Pneumonia" if predicted==1 else "Normal"
