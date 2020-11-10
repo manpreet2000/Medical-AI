@@ -47,10 +47,7 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
     |   ├── pne.pt                                                      # trained weights
     ├── pneapp.py                                                       # web app file
 
-<<<<<<< HEAD
-=======
   
->>>>>>> baa7f281db791260b5815b6c8781a5749ce3543d
 
 #### Content
 | Directory | Info |
@@ -62,7 +59,6 @@ The normal chest X-ray (left panel) depicts clear lungs without any areas of abn
 | `data` | Contains [data](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) which is hidden  |
 | `weights` | contains trained weights |
 
-<<<<<<< HEAD
 ## Evaluation 
 The proposed approach was evaluated using Precision , Recall , Accuracy and F1 Score. Our source code is freely available here.
 <img src="readme_images/fig3.jpeg" alt="Figure 3. Evaluation of Model " width="" height="">
@@ -71,8 +67,6 @@ The proposed approach was evaluated using Precision , Recall , Accuracy and F1 S
 * Python 3.4+
 * PyTorch and its dependencies
 
-=======
->>>>>>> baa7f281db791260b5815b6c8781a5749ce3543d
 ## How to Install and Run
 * Clone this repository and run in command prompt
 ```bash
@@ -83,12 +77,10 @@ pip install -r requirement.txt
 python pneapp.py
 ``` 
 * Update `X-Ray` image and predict if user has `pnemonia` or not
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <img src="out.gif" alt=" Output GIF " width="" height="">
-=======
+
 <img src="readme_images/fig4.jpg" alt=" Prediction of Model " width="" height="">
->>>>>>> dev
 
 ## Train your own model*
 * you can change configuration from config.py
@@ -97,6 +89,6 @@ python pneapp.py
 > * :- 
 =======
 <img src="image.png" alt="Figure 2. Prediction Pneumonia/Normal " width="" height="">
->>>>>>> baa7f281db791260b5815b6c8781a5749ce3543d
+
 
 
