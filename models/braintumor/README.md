@@ -15,7 +15,7 @@ a deep learning algorithm." Computers in Biology and Medicine, 2019.
 This dataset contains brain MR images together with manual FLAIR abnormality segmentation masks. The images were obtained from The Cancer Imaging Archive (TCIA). They correspond 
 to 110 patients included in The Cancer Genome Atlas (TCGA) lower-grade glioma collection with at least fluid-attenuated inversion recovery (FLAIR) sequence and genomic cluster data available.
 
-<img src="readme_images/fig2.jpg" alt="Figure 2. Illustrative Examples of Brain MR Image in Patients with Brain Tumor" width="" height="">
+<img src="readme_images/data.png" alt="Figure 2. Illustrative Examples of Brain MR Image in Patients with Brain Tumor" width="" height="">
 
 ## Introduction
 
@@ -23,6 +23,7 @@ to 110 patients included in The Cancer Genome Atlas (TCGA) lower-grade glioma co
     .
     ├── data                                                            # data folder is hidden , path is provided in .gitnore file
     │   ├── data.csv
+    |   |── Image_folder
     ├── src
     │   ├── config.py                                                   # contains all the configuration
     |   ├── data_load.py                                                # loading dataset
@@ -54,7 +55,7 @@ to 110 patients included in The Cancer Genome Atlas (TCGA) lower-grade glioma co
 ## Evaluation 
 The proposed approach was evaluated using Precision , Recall , Accuracy and F1 Score. Our source code is freely available here.
 
-<img src="readme_images/fig3.jpg" alt="Figure 3. Evaluation of Model " width="" height="">
+<img src="readme_images/brainres.png" alt="Figure 3. Evaluation of Model " width="" height="">
 
 ## Prerequisites
 * Python 3.4+
@@ -71,11 +72,10 @@ python brainapp.py
 ``` 
 * Update `MR` Image and predict if user has `brain tumor` or not and if yes then `where` 
 
-<img src="out.gif" alt=" Output GIF " width="" height="">
 
 ## Train your own model*
-* you can change configuration from config.py
+* For traning you need to run `train.py` in src directory.
+* if want to change epochs, data directory, random seed, learning rate, etc change it from `config.py`.
 
 > Note :
-
-> `*` :- 
+> * :- This project purely utilize pytorch, it would be appriciated to use pytorch only.
