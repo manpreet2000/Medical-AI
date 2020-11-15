@@ -21,7 +21,7 @@ class predict:
         ret= loaded_model.predict(self.arr)[0]
         return ret
     
-# if __name__=="__main__":
-#     p=predict([[35.0,92.0,126.0,2.0,77.7,12.0,5.0,165.0,135.0,1.37,7.6,2.0,142.0, 	323.0, 	41.8, 	5.8, 	31.109434, 	50.0]])
-#     print(p.predict_risk())
+if __name__=="__main__":
+    p=predict([[35.0,92.0,126.0,2.0,77.7,12.0,5.0,165.0,135.0,1.37,7.6,2.0,142.0, 	323.0, 	41.8, 	5.8, 	31.109434, 	50.0]])
+    print(p.predict_risk())
 
