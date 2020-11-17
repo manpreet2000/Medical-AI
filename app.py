@@ -21,5 +21,8 @@ app.register_blueprint(rapp,url_prefix="/models/riskmodel")
 def index():
     return render_template("index.html")
 
+@app.route("/getting_started")
+def gs():
+    return render_template("getting_started.html")
 if __name__=="__main__":
     app.run(debug=True)
