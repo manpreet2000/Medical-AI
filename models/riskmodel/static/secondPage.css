@@ -1,0 +1,25 @@
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.upload {
+  margin-top: 4rem;
+  background-color: #fff7de;
+  padding: 5rem;
+  border-radius: 20px;
+}
+
+.upload .btn {
+  color: black;
+  width: 8rem;
+  background-color: #ffeba9;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-weight: lighter;
+}
+
+.upload .btn:hover {
+  background-color: black;
+  color: white;
+}
