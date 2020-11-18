@@ -10,6 +10,7 @@ Such risk models are playing increasingly important roles in the practise of med
 The dataset is organized in 2 files NHANESI_X.csv/NHANESI_Y.csv . There are 9,933 examples .Using data from the prospective Nurses Health Study (NHS).
 The National Health and Nutrition Examination Survey (NHANES) is a program of studies designed to assess the health and nutritional status of adults and children in the United States. 
 NHANES contains comprehensive health  records  of  patients  from  the  state  of  Arizona linked  across  systems  and  time.
+
 img src="readme_images/fig2.jpg" alt="Figure 2. Illustrative Examples of Risk Model dataset" width="" height="">
 
 ## Introduction
