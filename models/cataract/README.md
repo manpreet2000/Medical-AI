@@ -70,5 +70,5 @@ python catapp.py
 * if want to change epochs, data directory, random seed, learning rate, etc change it from `config.py`.
 
 > Note :
-> * :- This project purely utilize pytorch, it would be appriciated to use pytorch only.
+> *:- This project purely utilize pytorch, it would be appriciated to use pytorch only.
 
