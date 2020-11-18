@@ -89,4 +89,4 @@ python pneapp.py
 <img src="image.png" alt="Figure 2. Prediction Pneumonia/Normal " width="" height="">
 
 
-> * :- This project purely utilize pytorch, it would be appriciated to use pytorch only.
+> *:- This project purely utilize pytorch, it would be appriciated to use pytorch only.
