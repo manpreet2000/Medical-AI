@@ -86,7 +86,4 @@ python pneapp.py
 * if want to change epochs, data directory, random seed, learning rate, etc change it from `config.py`.
 
 > Note :
-<img src="image.png" alt="Figure 2. Prediction Pneumonia/Normal " width="" height="">
-
-
 > *:- This project purely utilize pytorch, it would be appriciated to use pytorch only.
