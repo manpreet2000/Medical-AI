@@ -73,9 +73,9 @@ python brainapp.py
 * Update `MR` Image and predict if user has `brain tumor` or not and if yes then `where` 
 
 
-## Train your own model^
+## Train your own model#
 * For traning you need to run `train.py` in src directory.
 * if want to change epochs, data directory, random seed, learning rate, etc change it from `config.py`.
 
 > Note :
-> ^ :- This project purely utilize pytorch, it would be appriciated to use pytorch only.
+> # :- This project purely utilize pytorch, it would be appriciated to use pytorch only.
