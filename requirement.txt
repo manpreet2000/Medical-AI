@@ -1,0 +1,10 @@
+albumentations==0.4.5
+Flask==1.1.2
+Flask-Cors==3.0.9
+matplotlib==3.2.1
+numpy==1.18.5
+pandas==1.0.4
+seaborn==0.10.1
+sklearn
+torch==1.5.0+cpu
+torchvision==0.6.0+cpu
