@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #ffeba9;
+  font-family: "Poppins", sans-serif;
+}
+
+.home {
+  text-decoration: none;
+  font-size: 32;
+  color: black;
+  display: inline;
+}
+
+nav a:hover {
+  border-bottom: black 1px solid;
+  color: black;
+  text-decoration: none;
+}
+
+nav {
+  margin-top: 3rem;
+}
+
+nav ul {
+  float: right;
+  list-style-type: none;
+  display: inline;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 1rem;
+  padding-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#top-section {
+  margin-top: 8rem;
+  height: 41rem;
+}
+
+.heading {
+  font-size: 6vh;
+  font-weight: normal;
+}
+
+#top-section p {
+  font-weight: lighter;
+}
+
+#top-section a {
+  border: 1px solid black;
+  width: 10rem;
+  border-radius: 20px;
+}
+
+#top-section a:hover {
+  background-color: black;
+  color: white;
+}
+
+#top-section .image img {
+  float: right;
+}
+
+#mid-section .row .col .card {
+  margin-left: 0rem;
+}
+
+#mid-section .brain {
+  padding: 0rem;
+  padding-bottom: 0;
+  width: 12rem;
+  height: 12rem;
+}
+
+#mid-section .eye {
+  margin-top: 0rem;
+  padding-bottom: 0;
+  padding: 0rem;
+  height: 11rem;
+  width: 11rem;
+}
+
+#mid-section .lungs {
+  padding: 0rem;
+  width: 12rem;
+  padding-bottom: 0;
+  height: 12rem;
+}
+
+#mid-section .btn {
+  color: black;
+  background-color: #ffeba9;
+  border: 1px solid rgba(0, 0, 0, 0.534);
+  border-radius: 20px;
+}
+
+#mid-section .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+#mid-section .card .card-body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#mid-section .card {
+  border-radius: 20px;
+  align-items: center;
+  height: 22rem;
+  width: 18rem;
+  box-shadow: 4px 4px 4px #e5e5e5;
+}
+
+#mid-section {
+  background-color: #fff7de;
+  height: 35rem;
+  padding: 5rem;
+}
+
+footer {
+  padding: 4rem;
+  background-color: black;
+  color: white;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  #mid-section .row .col .card {
+    margin-left: 2;
+  }
+
+  #mid-section .card {
+    width: 14rem;
+    height: 20rem;
+  }
+  #mid-section .brain {
+    width: 15rem;
+    height: 10rem;
+  }
+
+  #mid-section .eye {
+    width: 15rem;
+    height: 9rem;
+  }
+
+  #mid-section .lungs {
+    width: 12rem;
+    height: 11rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    text-align: center;
+  }
+
+  .hone {
+    margin-left: 0;
+  }
+
+  #top-section {
+    margin-top: 3rem;
+    height: auto;
+    padding-bottom: 4rem;
+  }
+
+  #top-section a {
+    margin-bottom: 3rem;
+  }
+
+  #mid-section {
+    height: auto;
+    padding: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  #mid-section .row .col .card {
+    margin-top: 2rem;
+  }
+
+  #mid-section .card {
+    width: 30vh;
+    height: 43vh;
+  }
+
+  #mid-section .card3 {
+    height: 45vh;
+  }
+
+  #mid-section .brain {
+    width: 30vh;
+    height: 20vh;
+  }
+  #mid-section .eye {
+    margin-top: 0.5rem;
+    padding: 4vh;
+    width: 30vh;
+    height: 20vh;
+  }
+  #mid-section .lungs {
+    width: 30vh;
+    height: 23vh;
+  }
+
+  footer ul {
+    margin: 0;
+    padding: 0;
+  }
+}
