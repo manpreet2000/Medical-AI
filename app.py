@@ -24,5 +24,7 @@ def index():
 @app.route("/getting_started")
 def gs():
     return render_template("getting_started.html")
+
+
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(port=8000,debug=True)
