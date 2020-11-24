@@ -29,8 +29,8 @@ def index():
         model=predict.predict(inp)
         result=model.predict_risk()
         print(result)
-        return render_template("/rkindex.html",result=result)
-    return render_template("/rkindex.html",result=None)
+        return render_template("/rkindex.html",resultt=result)
+    return render_template("/rkindex.html",resultt=None)
 
 # if __name__=="__main__":
 #     rapp.run(debug=True)
