@@ -71,6 +71,7 @@ pip install -r requirement.txt
 python brainapp.py
 ``` 
 * Update `MR` Image and predict if user has `brain tumor` or not and if yes then `where` 
+<img src="readme_images/fig4.jpg" alt="Figure 4.  Brain Tumor Segment Prediction " width="" height="">
 
 
 ## Train your own model*
