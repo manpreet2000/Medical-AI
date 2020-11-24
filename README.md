@@ -23,21 +23,21 @@ Let's first understand the directory structure .
 
 #### Directory Layout 
     .
-    ├── models                                                           #
+    ├── models                                                           # contains all models
     │   ├── braintumor
     │   ├── cataract
     │   ├── pneumonia
     │   ├── riskmodel
-    ├── static                                                           #
+    ├── static                                                           # contains image file , css file and js files .
     │   ├── images
     │   ├── style.css
-    ├── templates                                                        #
+    ├── templates                                                        # contains all html files
     │   ├── getting_started.html
     │   ├── index.html
-    ├── Procfile                                                         #
-    ├── app.py                                                           #
-    ├── requirements.txt                                                 #
-    ├── runtime.txt                                                      #
+    ├── Procfile                                                         # contains profile information
+    ├── app.py                                                           # web app file
+    ├── requirements.txt                                                 # contains all required libraries and dependencies 
+    ├── runtime.txt                                                      # 
    
    
 ## How to Install and Run
