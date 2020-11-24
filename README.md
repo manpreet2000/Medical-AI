@@ -21,5 +21,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 
 
->                  "Take stands, take risks, take responsibility."
->                                                — Muriel Siebert
+>                  **"Take stands, take risks, take responsibility."**
+>                                                **— Muriel Siebert**
