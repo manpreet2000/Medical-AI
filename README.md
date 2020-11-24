@@ -58,7 +58,7 @@ python app.py
 * Select the `problem` you want to check .
 * Update `input` for that specific prroblem and check the `prediction\output` .
                                   
-## How to Contribute ?
+## About Contribution :
 * Raise the `issue` .
 * Work on raised issues .
 * Come up with interesting Medical related problems and solutions .
