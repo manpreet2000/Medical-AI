@@ -10,12 +10,12 @@ Various specialties in medicine have shown an increase in research regarding AI.
 ## PROJECT :
 You can find our project/website by [Clicking Here!](https://arcane-garden-82331.herokuapp.com/) .
 
-<img src="readme_images/out.gif" alt="Figure 1. Illustration of Medical AI website" >
+<img src="readme_images/medicalai-2020-11-25_00.10.09.gif" alt="Figure 1. Illustration of Medical AI website" >
 
 ## OUR INITIATIVE :
-*
-*
-*
+* We purpose a portal that has all possible solutions to Medical problems.
+* It tries to remove the barrier between what factors effect the problem.
+* We purpose simple and handy website using Machine Learning algorithms.
 
 
 ## HOW TO GET STARTED ?
