@@ -74,5 +74,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed information.
 See [LICENSE](LICENSE) file.
 
 
->                    "Take stands, take risks, take responsibility."
->                                                 — Muriel Siebert
+>                                      "Take stands, take risks, take responsibility."
+>                                                                    — Muriel Siebert
