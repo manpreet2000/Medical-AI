@@ -61,7 +61,7 @@ python rapp.py
 ``` 
 * Update `Features` and predict user has `risk` or not .
 
-<img src="readme_images/fig4.jpg" alt=" Prediction of Model " width="" height="">
+<img src="readme_images/fig.4.jpg" alt=" Prediction of Model " width="" height="">
 
 
 ## Train your own model*
