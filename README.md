@@ -6,7 +6,7 @@
 
 You can find our project by [Clicking Here!](https://arcane-garden-82331.herokuapp.com/) .
 
-<img src="readme_images/out.gif" alt="Figure 1. Illustration of Medical AI website >
+<img src="readme_images/out.gif" alt="Figure 1. Illustration of Medical AI website" >
 
 ## OUR INITIATIVE :
 
