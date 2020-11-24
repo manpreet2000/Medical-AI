@@ -8,7 +8,7 @@ The 1980s and 1990s brought the proliferation of the microcomputer and new level
 Various specialties in medicine have shown an increase in research regarding AI. As the novel coronavirus ravages through the globe, the United States is estimated to invest more than $2 billion in AI related healthcare research over the next 5 years, more than 4 times the amount spent in 2019 ($463 million).
 
 ## PROJECT :
-You can find our project by [Clicking Here!](https://arcane-garden-82331.herokuapp.com/) .
+You can find our project/website by [Clicking Here!](https://arcane-garden-82331.herokuapp.com/) .
 
 <img src="readme_images/out.gif" alt="Figure 1. Illustration of Medical AI website" >
 
