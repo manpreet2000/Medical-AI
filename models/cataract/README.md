@@ -63,6 +63,7 @@ pip install -r requirement.txt
 python catapp.py
 ``` 
 * Update `Retina` image and predict if user has `cataract` or not
+<img src="readme_images/fig4.png" alt="Figure 4.  Cataract/Normal Prediction " width="" height="">
 
 
 ## Train your own model*
